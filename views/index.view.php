@@ -19,12 +19,12 @@
                 <tbody>
                     <?php foreach ($rents as $rent): ?>
                     <tr>
-                        <th><?php echo $rent["id"]; ?></th>
-                        <th><?php echo $rent["user"]; ?></th>
-                        <th><?php echo $rent["phone"]; ?></th>
-                        <th><?php echo $rent["provider"]; ?></th>
-                        <th><?php echo displayDate($rent["start_date"]); ?></th>
-                        <th><?php echo displayDate($rent["end_date"]); ?></th>
+                        <th><?php echo $rent->id; ?></th>
+                        <th><?php echo $rent->user; ?></th>
+                        <th><?php echo $rent->phone; ?></th>
+                        <th><?php echo $rent->provider; ?></th>
+                        <th><?php echo displayDate($rent->start_date); ?></th>
+                        <th><?php echo displayDate($rent->end_date); ?></th>
                     </tr>
                     <?php endforeach; ?>
                 </tbody>

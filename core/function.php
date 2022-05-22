@@ -21,15 +21,22 @@ $config = [
     "database" => "phone_rental"
 ];
 
-$db = mysqli_connect($config["hostname"], $config["username"], $config["password"], $config["database"]) or die("Error connections!");
+// $config = [
+//     "xampp" => [
+//         "host" => "localhost",
+//         "username" => "root",
+//         "password" => "",
+//         "db" => "rental",
+//     ],
+//     "mamp" => [
+//         "host" => "localhost:3307",
+//         "username" => "root",
+//         "password" => "root",
+//         "db" => "rental",
+//     ],
+// ];
 
-function selectAll($table)
-{
-    global $db;
-    $sql = "SELECT * FROM $table";
-    $query = mysqli_query($db, $sql);
-    return mysqli_fetch_all($query, MYSQLI_ASSOC);
-}
+$db = mysqli_connect($config["hostname"], $config["username"], $config["password"], $config["database"]) or die("Error connections!");
 
 function redirect($page){
     header("Location: $page");

@@ -8,16 +8,16 @@
             <input class="form-control mb-3" type="text" placeholder="full name" name="user">
             <select class="form-control mb-3" name="phone">
                 <?php foreach ($phones as $phone) : ?>
-                <option value="<?php echo $phone["brand"] . " " . $phone["model"]; ?>">
-                    <?php echo "{$phone['brand']} {$phone['model']}"; ?>
+                <option value="<?php echo $phone->brand . " " . $phone->model; ?>">
+                    <?php echo "{$phone->brand} {$phone->model}"; ?>
                 </option>
                 <?php endforeach; ?>
             </select>
 
             <select class="form-control mb-3" name="provider">
                 <?php foreach ($providers as $provider) : ?>
-                <option value="<?php echo $provider["provider"]; ?>">
-                    <?php echo $provider["provider"]; ?>
+                <option value="<?php echo $provider->provider; ?>">
+                    <?php echo $provider->provider; ?>
                 </option>
                 <?php endforeach; ?>
             </select>
