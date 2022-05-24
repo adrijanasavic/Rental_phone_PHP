@@ -14,4 +14,13 @@ class QueryBuilder extends Connection {
         return $query->fetchAll(PDO::FETCH_OBJ) ;
     }
 
+    public function selectSingle($table, $id)
+    {
+        $sql = "SELECT * FROM $table WHERE id = :id";
+
+        $query = $this->db->prepare($sql);
+        $query->execute(["id" => $id]);
+        return $query->fetch(PDO::FETCH_OBJ);
+    }
+
 }

@@ -28,7 +28,7 @@
                         <th><?php echo $rent->provider; ?></th>
                         <th><?php echo displayDate($rent->start_date); ?></th>
                         <th><?php echo displayDate($rent->end_date); ?></th>
-                        <th><a class="btn btn-warning" href="edit_rent.php">Edit</a></th>
+                        <th><a class="btn btn-warning" href="edit_rent.php?id=<?php echo $rent->id; ?>">Edit</a></th>
                         <th><a class="btn btn-danger" href="delete_rent.php?id=<?php echo $rent->id; ?>">Delete</a></th>
                     </tr>
                     <?php endforeach; ?>
